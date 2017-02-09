@@ -3,7 +3,7 @@ var Queue = function() {
   // but try not not reference your old code in writing the newn st
   var instance = {};
 
-  instance.storage = {}
+  instance.storage = {};
   instance.front = 0;
   instance.back = 0;
 

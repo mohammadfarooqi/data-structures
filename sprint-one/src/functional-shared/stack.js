@@ -5,7 +5,7 @@ var Stack = function() {
   var instance = {};
 
   instance.sizeA = 0;
-  instance.storage = {}
+  instance.storage = {};
 
   _.extend(instance, stackMethods);
 
