@@ -7,18 +7,16 @@ var LinkedList = function() {
     //create a node
     var node = Node(value);
 
-    //first case is if head is null (empty LL)
-    if (list.head == null) {
+    if (list.head === null) {
+      //first case is if head is null (empty LL)
       list.head = node;
       list.tail = node;
-    }
-    //second case is if head and tail is the same (only 1 value in LL)
-    else if (list.head == list.tail){
+    } else if (list.head === list.tail) {
+      //second case is if head and tail is the same (only 1 value in LL)
       list.head.next = node;
       list.tail = node;
-    }
+    } else {
     //third case is if any additional value is added after the first node
-    else {
       list.tail.next = node;
       list.tail = node;
     }
@@ -33,9 +31,10 @@ var LinkedList = function() {
   list.contains = function(target) {
     var node = this.head;
 
-    while(node) {
-      if (node.value == target)
+    while (node) {
+      if (node.value === target) {
         return true;
+      }
 
       node = node.next;
     }
@@ -57,4 +56,6 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+    add and remove have constant time
+    contains has linear
  */
